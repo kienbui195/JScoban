@@ -1,4 +1,4 @@
 
 function showMessage(){
-    alert('Xin chào!');
+    document.getElementById('messageDiv').innerHTML = 'Xin chào!';
 }
