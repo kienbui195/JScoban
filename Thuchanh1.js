@@ -1,4 +1,4 @@
 
-function showMessage(){
-    alert('Xin chào!');
+function showmes() {
+    alert('xin chao');
 }
