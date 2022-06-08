@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap ve bien, kieu dl, toan tu</title>
+</head>
+<body>
+    <h2>1. Ctinh tinh diem tong va trung binh cua sinh vien:</h2>
+    <p>NHap diem:</p>
+    <p>Vat ly <input type="number" id="vl" value=""></p>
+    <p>Hoa hoc <input type="number" id="hh" value=""></p>
+    <p>Sinh hoc <input type="number" id="sh" value="" onchange="sum()"></p>
+    <p>Diem trung binh: <strong id="KQ2"></strong><br>Diem tong: <strong id="KQ1"></strong></p>
+
+    <h2>2. Ctrinh chuyen doi nhiet do</h2>
+    <p><input type="number" id="doc" value="" onchange="chuyendoi()"> do C = <strong id="KQ"></strong> do F</p>
+
+    <h2>3+4. Ctrinh tinh dien tich va chu vi hinh tron: </h2>
+    <p>Ban kinh: <input type="number" id="bk" value="" onchange="Shinhtron()"> m</p>
+    <p><i id="ketqua"></i> </p>
+
+</body>
+</html>
+
+<script>
+    function sum() {
+        let a = +document.getElementById('vl').value;
+        let b = +document.getElementById('hh').value;
+        let c = +document.getElementById('sh').value;
+        t = a + b + c;
+        tb = (a + b + c) / 3;
+        document.getElementById('KQ1').innerHTML = t;
+        document.getElementById('KQ2').innerHTML = tb;
+    }
+
+    function chuyendoi() {
+        let d = +document.getElementById('doc').value;
+        f = (9 * d + 160)/5;
+        z = f.toFixed(3);
+        document.getElementById('KQ').innerHTML = z;
+    }
+
+    function Shinhtron() {
+        let a = document.getElementById('bk').value;
+        S = a * a * Math.PI;
+        P = 2 * a * Math.PI;
+        document.getElementById('ketqua').innerHTML = 'S = ' + S + 'm2/ ' + 'P = ' + P + 'm';
+    }
+</script>
