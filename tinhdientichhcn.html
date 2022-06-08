@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh dien tich hcn</title>
+</head>
+<body>
+    <p>Dien tich hinh chu nhat</p>
+    <p>Chieu dai: <input type="number" id="cd" value=""> Cm</p>
+    <p>Chieu rong: <input type="number" id="cr" value=""> Cm</p>
+    <button type="button" onclick="DT()">Tinh dien tich</button>
+    <p>Dien tich hinh chu nhat S =  <strong id="KQ"></strong> </p>
+
+</body>
+</html>
+<script>
+    function DT() {
+        let a = +document.getElementById('cd').value;
+        let b = +document.getElementById('cr').value;
+        c = a*b;
+        z = c.toFixed(3);
+        document.getElementById('KQ').innerHTML = z + 'Cm2'
+    }
+</script>
