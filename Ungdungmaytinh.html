@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung dung may tinh</title>
+</head>
+<body>
+    <h2>Caculator</h2>
+    <input type="text" id="a1"> <input type="text" id="a2"><br><br>
+    <button type="button" onclick="tong()">+</button>
+    <button type="button" onclick="hieu()">-</button>
+    <button type="button" onclick="tich()">x</button>
+    <button type="button" onclick="chia()">/</button>
+    <br>
+    <div id = 'KQ'></div>
+
+</body>
+</html>
+<script>
+    function tong() {
+        let a= +document.getElementById('a1').value
+        let b= +document.getElementById('a2').value
+        let sum = a + b
+        document.getElementById('KQ').innerHTML = 'Tong =' + sum
+    }
+
+    function hieu() {
+        let a= +document.getElementById('a1').value
+        let b= +document.getElementById('a2').value
+        let sum = a - b
+        document.getElementById('KQ').innerHTML = 'Hieu =' + sum
+    }
+
+    function tich() {
+        let a= +document.getElementById('a1').value
+        let b= +document.getElementById('a2').value
+        let sum = a * b
+        document.getElementById('KQ').innerHTML = 'Tich =' + sum
+    }
+
+    function chia() {
+        let a= +document.getElementById('a1').value
+        let b= +document.getElementById('a2').value
+        let sum = a / b
+        document.getElementById('KQ').innerHTML = 'Thuong =' + sum
+    }
+
+</script>
