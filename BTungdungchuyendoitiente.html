@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi tien te</title>
+    <style>
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Chuyen doi tien te:</h2>
+    <form>
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+                <th></th>
+            </tr>
+            <tr>
+                <th><input type="text" id="value"  style="width: 100px"></th>
+                <td><select id="gtvao">
+                    <option value="vnd1">VND</option>
+                    <option value="usd1">USD</option>
+                    <option value="eur1">Euro</option>
+                </select></td>
+                <td><select id="gtra">
+                    <option value="vnd1">VND</option>
+                    <option value="usd1">USD</option>
+                    <option value="eur1">Euro</option>
+                </select></td>
+                <td><button type="button" onclick="chuyendoi()">Convert</button> </td><br>
+
+
+            </tr>
+        </table>
+        <Strong id="KQ"></Strong>
+    </form>
+</body>
+</html>
+
+
+<script>
+    function chuyendoi() {
+        let a = +document.getElementById('value').value
+        let gtvao = document.getElementById('gtvao').value
+        let gtra = document.getElementById('gtra').value
+        let money;
+        if(gtra === gtvao)
+        {
+            document.getElementById('KQ').innerHTML = 'Gia tri khong doi'
+        }
+        if(gtvao === 'vnd1' && gtra === 'usd1')
+        {
+            money =  a/23000
+            document.getElementById('KQ').innerHTML = money + 'USD'
+        }
+        if (gtvao === 'vnd1' && gtra === 'eur1')
+        {
+            money = a/24700
+            document.getElementById('KQ').innerHTML = money + 'EUR'
+        }
+        if (gtvao === 'usd1'&& gtra === 'vnd1')
+        {
+            money = a*23000
+            document.getElementById('KQ').innerHTML = money + 'VND'
+        }
+        if (gtvao === 'usd1'&& gtra === 'eur1')
+        {
+            money = a*0.94
+            document.getElementById('KQ').innerHTML = money + 'EUR'
+        }
+        if (gtvao === 'eur1'&& gtra === 'vnd1')
+        {
+            money = a*24700
+            document.getElementById('KQ').innerHTML = money + 'VND'
+        }
+        if (gtvao === 'eur1'&& gtra === 'usd1')
+        {
+            money = a/0.94
+            document.getElementById('KQ').innerHTML = money + 'usd'
+        }
+
+    }
+</script>
