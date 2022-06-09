@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ktra dang nhap he thong cua ng dung</title>
+</head>
+<body>
+    <script>
+        let a = prompt('User id:','');
+        if (a === 'Admin') {
+            let b = prompt('Password:','');
+            if (b === 'TheMaster') {
+            alert('Welcome!');
+        } else if (b === 'null') {
+            alert('Canceled!');
+        } else {
+            alert('Wrong Password!');
+        }
+        } else if (a === 'null') {
+            alert('Canceled');
+        } else {
+            alert("I don't know you");
+        }
+
+    </script>
+</body>
+</html>
