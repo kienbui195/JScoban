@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label><input type="checkbox" id="good" onclick="an1()"/> Good</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="fast" onclick="an2()"/> Fast</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="cheap" onclick="an3()"/> Cheap</label></td>
+        </tr>
+
+
+    </table>
+    <script>
+        let x = document.getElementById('good');
+        let y = document.getElementById('fast');
+        let z = document.getElementById('cheap');
+        function an1() {
+           if (x.checked  && y.checked) {
+                z.checked = false;
+            }
+        }
+        function an2() {
+            if (y.checked  && z.checked) {
+                x.checked = false;
+            }
+        }
+        function an3() {
+            if (z.checked  && x.checked) {
+                y.checked = false;
+            }
+        }
+    </script>
+
+
+</body>
+</html>
