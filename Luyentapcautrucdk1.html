@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*let x = prompt('Nhap a:');
+    let y = prompt('Nhap b:');
+    if (y === 0) {
+        alert('a khong chia het cho b');
+    } else if ((x%y) === 0) {
+        alert('a chia het cho b');
+    } else alert('a khong chia het cho b');*/ //bai1
+
+    /*let tuoi = prompt("Nhap tuoi hoc sinh:");
+    if (tuoi < 13) {
+        alert('hoc sinh khong du tuoi hoc lop 10');
+    } else alert('hoc sinh du dieu kien dki lop 10');*/ //bai2
+
+    /*if (x > 0)
+        alert('a lon hon 0');
+    else alert('a nho hon 0');*/ //bai3
+
+    /*let a = +prompt('Nhap a:');
+    let b = +prompt('Nhap b:');
+    let c = +prompt('Nhap c:');
+    let max = a;
+    if (b > max) {
+        max = b;
+    } if (c > max) {
+        max = c;
+    }
+    alert('Gia tri lon nhat trong 3 so: ' + max);*/ //bai4
+
+    /*let a = +prompt('Nhap diem ktra:');
+    let b = +prompt('Nhap diem giua ki:');
+    let c = +prompt('Nhap cuoi ki:');
+    let diemtb = (a + 2*b + 3*c)/6;
+    if (diemtb <= 5) {
+        alert('Hoc sinh hoc luc kem');
+    } else if (diemtb <= 8) {
+        alert('Hoc sinh hoc luc kha');
+    } else alert('Hoc sinh hoc luc tot');*/ //bai5
+
+    //Muc hoa hong nhan duoc dua tren doanh so ban hang
+    /*<5tr 5%
+       5tr - 10tr 8%
+       10 - 20tr 10%
+       >20tr 12%*/
+
+    let ds = prompt('Doang so:');
+    let money;
+    if (ds < 5 && ds > 0) {
+        money = ds + 0.05 * ds;
+        alert('Tien luong nhan duoc: ' + money);
+    } if (ds > 5 && ds < 10) {
+        money = ds + 0.08 * ds;
+        alert('Tien luong nhan duoc: ' + money);
+    } if (ds < 20 && ds > 10) {
+        money = ds + 0.1 * ds;
+        alert('Tien luong nhan duoc: ' + money);
+    } if (ds >20) {
+        money = ds + 0.12 * ds;
+        alert('Tien luong nhan duoc: ' + money);
+    } else ('Nhap sai');
+
+
+
+
+</script>
+</body>
+</html>
