@@ -1,10 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>May tinh than ki</title>
+    <style>
+        td {
+            align-text: center;
+
+        }
+        button {
+            width: 30px;
+            color: blue;
+        }
+    </style>
 </head>
 <body>
-$END$
+  <table>
+      <tr>
+          <td colspan="4"><input type="text" id="hienthi" disabled></td>
+      </tr>
+      <tr>
+          <td><button id="1" onclick="inso(1)"> 1 </button></td>
+          <td><button id="2" onclick="inso(2)" > 2 </button></td>
+          <td><button id="3" onclick="inso(3)"> 3 </button></td>
+          <td><button id="tong" onclick="inso('+')"> + </button></td>
+      </tr>
+      <tr>
+          <td><button id="4" onclick="inso(4)" > 4 </button></td>
+          <td><button id="5" onclick="inso(5)"> 5 </button></td>
+          <td><button id="6" onclick="inso(6)"> 6 </button></td>
+          <td><button id="tru" onclick="inso('-')"> - </button></td>
+      </tr>
+      <tr>
+          <td><button id="7" onclick="inso(7)"> 7 </button></td>
+          <td><button id="8" onclick="inso(8)"> 8 </button></td>
+          <td><button id="9" onclick="inso(9)"> 9 </button></td>
+          <td><button id="nhan" onclick="inso('*')"> x </button></td>
+      </tr>
+      <tr>
+          <td><button id="del" onclick="delall()" > C </button></td>
+          <td><button id="0"  onclick="inso(0)"> 0 </button></td>
+          <td><button id="tinh" onclick="tinhtoan()"> = </button></td>
+          <td><button id="chia" onclick="inso('/')"> / </button></td>
+      </tr>
+  </table>
+
+<script>
+    function inso(x) {
+        b = document.getElementById('hienthi').value +=x;
+        document.getElementById('hienthi').value = b;
+    }
+
+    function delall() {
+        const c = document.getElementById('hienthi')
+        c.value = ''
+    }
+
+    function tinhtoan() {
+        const c = document.getElementById('hienthi')
+        let total = 0;
+        total = eval(c.value);
+        c.value = total;
+    }
+
+
+</script>
+
+
+
+
 </body>
 </html>
