@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <h1>Do you love me?</h1>
+    <button id="yes" onclick="sk1()">Yes</button><button id="no" onmouseover="sk2()">No</button>
+
+    <script>
+        function sk1() {
+            alert('<3');
+        }
+        function sk2() {
+            let x = document.getElementById('no');
+            x.style.top = parseInt(x.style.top) + Math.random()*300 + 'px';
+            x.style.left = parseInt(x.style.left) + Math.random()*300 + 'px';
+            x.style.bottom = parseInt(x.style.left) - Math.random()*300 + 'px';
+            x.style.left = parseInt(x.style.left) - Math.random()*300 + 'px';
+        }
+        function init() {
+            let x = document.getElementById('no');
+            x.style.position = 'relative';
+            x.style.left = '0px';
+            x.style.top = '0px';
+            x.style.right = '0px';
+            x.style.bottom = '0px';
+        }
+        window.onload = init;
+    </script>
 </body>
 </html>
